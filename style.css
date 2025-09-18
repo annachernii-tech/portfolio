@@ -1,0 +1,135 @@
+/* Основні кольори */
+:root {
+    --main-bg: #8a2be2;
+    /* темно-фіолетовий */
+    --accent-bg: #ffffff;
+    /* білий фон */
+    --main-text-light: #ffffff;
+    /* білий текст */
+    --main-text-dark: #2c003e;
+    /* темний текст на білому фоні */
+}
+
+/* Скидання стилів */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Загальний фон та колір тексту */
+body {
+    background-color: var(--accent-bg);
+    color: var(--main-text-dark);
+    line-height: 1.6;
+    padding: 20px;
+    text-align: center;
+    /* Центруємо увесь текст по дефолту */
+}
+
+/* Хедер */
+header {
+    background-color: var(--main-bg);
+    color: var(--main-text-light);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    color: var(--main-text-light);
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Секції */
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Центруємо вміст секції */
+    justify-content: center;
+}
+
+#about {
+    background-color: var(--accent-bg);
+    color: var(--main-text-dark);
+}
+
+#skills {
+    background-color: var(--main-bg);
+    color: var(--main-text-light);
+}
+
+#skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contact {
+    background-color: var(--accent-bg);
+    color: var(--main-text-dark);
+}
+
+#contact button {
+    background-color: var(--main-bg);
+    color: var(--main-text-light);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    /* Відступ зверху */
+}
+
+#contact button:hover {
+    opacity: 0.8;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: var(--main-text-dark);
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    #contact button {
+        width: 100%;
+        padding: 12px 0;
+    }
+}
